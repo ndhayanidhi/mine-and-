@@ -1,0 +1,6 @@
+{
+  "name": "AI/ML Adventure Quest",
+  "description": "An interactive, gamified EdTech platform where students master AI, ML, Deep Learning, and programming. Write real code to control a 2D hero, generate AI roadmaps, build portfolio projects with Gemini assistance, and practice in an AI interview prep simulator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
