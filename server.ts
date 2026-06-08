@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 // Initialize GoogleGenAI SDK safely
 let ai: GoogleGenAI | null = null;
@@ -617,4 +617,8 @@ async function startServer() {
   });
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;
