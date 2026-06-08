@@ -723,7 +723,55 @@ export const WORLDS: World[] = [
         id: "w2_l1",
         worldId: 2,
         levelNumber: 1,
-        title: "Path Decider - Guard Filters",
+        title: "Data Stream Init",
+        description: "Verify that the data pipeline is receiving streaming packets.",
+        challengeText: "Write print statement outputting model initialization status text: \"GO\".",
+        language: "python",
+        starterCode: "# Echo GO parameters\n",
+        expectedOutput: "GO",
+        expectedAction: "move",
+        testCases: [
+          { validateFnStr: "code.includes('print(')", errorMessage: "Write standard output print calls." }
+        ],
+        hint: "Write: print('GO')"
+      },
+      {
+        id: "w2_l2",
+        worldId: 2,
+        levelNumber: 2,
+        title: "Target Feature Definition",
+        description: "Specify the initial dataset score variable before filtering.",
+        challengeText: "Declare score variable with check score parameter: 'score = 10'.",
+        language: "python",
+        starterCode: "# Set your score parameter here\n",
+        expectedOutput: "Variable 'score' set to 10 successfully.",
+        expectedAction: "collect",
+        testCases: [
+          { validateFnStr: "code.includes('score') && code.includes('10')", errorMessage: "Verify score = 10 syntax matches exactly." }
+        ],
+        hint: "Declare scores like: score = 10"
+      },
+      {
+        id: "w2_l3",
+        worldId: 2,
+        levelNumber: 3,
+        title: "Data Pipeline Loop",
+        description: "Perform iterative data cleanup passes using a standard loop construct.",
+        challengeText: "Write an iterator loop using 'for' that repeats 3 times to step over safely.",
+        language: "python",
+        starterCode: "# Implement a pacing loop\n",
+        expectedOutput: "Step 1..",
+        expectedAction: "walk_loop",
+        testCases: [
+          { validateFnStr: "code.includes('for ') || code.includes('while ')", errorMessage: "Please integrate valid 'for' or 'while' looping structures." }
+        ],
+        hint: "Write: for step in range(3): print(step)"
+      },
+      {
+        id: "w2_l4",
+        worldId: 2,
+        levelNumber: 4,
+        title: "Outlier Filter Guard",
         description: "The city guard requires you to isolate healthy records before entering.",
         challengeText: "Use an 'if' condition statement block to attack the shadow barrier when damage > 50.",
         language: "python",
@@ -736,10 +784,10 @@ export const WORLDS: World[] = [
         hint: "Write: if damage > 50: print('ATTACK')"
       },
       {
-        id: "w2_l2",
+        id: "w2_l5",
         worldId: 2,
-        levelNumber: 2,
-        title: "Elevator Shift - Column Selections",
+        levelNumber: 5,
+        title: "Data Vector Projection",
         description: "Define a secure function that coordinates leaping vectors onto floating city elevators.",
         challengeText: "Define a custom function using Python's 'def' keyword that schedules coordinates values.",
         language: "python",
@@ -750,6 +798,22 @@ export const WORLDS: World[] = [
           { validateFnStr: "code.includes('def ')", errorMessage: "Please formulate a custom function signature using 'def'." }
         ],
         hint: "Write: def jump_obstacle(): and ensure it registers properly."
+      },
+      {
+        id: "w2_l6",
+        worldId: 2,
+        levelNumber: 6,
+        title: "Hyperparameter Tuning",
+        description: "Adjust the underlying matrix weights to fit model criteria.",
+        challengeText: "Create a dictionary or list named 'weights' to evaluate optimized path settings.",
+        language: "python",
+        starterCode: "# Adapt model weights\nweights = [5.0, 1.2]\n",
+        expectedOutput: "Parameters adjusted.",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.includes('weights')", errorMessage: "Verify weights variable contains mathematical properties." }
+        ],
+        hint: "Keep weights variable initialized, and call mock updates or methods to train weights."
       }
     ]
   },
@@ -762,11 +826,91 @@ export const WORLDS: World[] = [
         id: "w3_l1",
         worldId: 3,
         levelNumber: 1,
-        title: "Optimization Shielding - Fitting Waves",
+        title: "Lab Boot Sequence",
+        description: "Verify that the machine learning lab cluster is operational.",
+        challengeText: "Write print statement outputting model initialization status text: \"GO\".",
+        language: "python",
+        starterCode: "# Echo GO parameters\n",
+        expectedOutput: "GO",
+        expectedAction: "move",
+        testCases: [
+          { validateFnStr: "code.includes('print(')", errorMessage: "Write standard output print calls." }
+        ],
+        hint: "Write: print('GO')"
+      },
+      {
+        id: "w3_l2",
+        worldId: 3,
+        levelNumber: 2,
+        title: "Registering Target Metrics",
+        description: "Verify accuracy settings by setting core parameters.",
+        challengeText: "Declare score variable with check score parameter: 'score = 10'.",
+        language: "python",
+        starterCode: "# Set your score parameter here\n",
+        expectedOutput: "Variable 'score' set to 10 successfully.",
+        expectedAction: "collect",
+        testCases: [
+          { validateFnStr: "code.includes('score') && code.includes('10')", errorMessage: "Verify score = 10 syntax matches exactly." }
+        ],
+        hint: "Declare scores like: score = 10"
+      },
+      {
+        id: "w3_l3",
+        worldId: 3,
+        levelNumber: 3,
+        title: "Training Epoch Cycle",
+        description: "Loop over training data to run backpropagation passes.",
+        challengeText: "Write an iterator loop using 'for' that repeats 3 times to step over safely.",
+        language: "python",
+        starterCode: "# Implement a pacing loop\n",
+        expectedOutput: "Step 1..",
+        expectedAction: "walk_loop",
+        testCases: [
+          { validateFnStr: "code.includes('for ') || code.includes('while ')", errorMessage: "Please integrate valid 'for' or 'while' looping structures." }
+        ],
+        hint: "Write: for step in range(3): print(step)"
+      },
+      {
+        id: "w3_l4",
+        worldId: 3,
+        levelNumber: 4,
+        title: "Gradient Descent Threshold",
+        description: "Halt gradient steps if error parameters cross critical regions.",
+        challengeText: "Use an 'if' condition statement block to attack the shadow barrier when damage > 50.",
+        language: "python",
+        starterCode: "damage = 75\n# Check if damage > 50 to attack\n",
+        expectedOutput: "Power-charging slash executed!",
+        expectedAction: "attack",
+        testCases: [
+          { validateFnStr: "code.includes('if ') && code.includes('damage')", errorMessage: "Ensure to implement an 'if' statement on damage metric." }
+        ],
+        hint: "Write: if damage > 50: print('ATTACK')"
+      },
+      {
+        id: "w3_l5",
+        worldId: 3,
+        levelNumber: 5,
+        title: "Activation Function Def",
+        description: "Define an activation model node mapping vectors securely.",
+        challengeText: "Define a custom function using Python's 'def' keyword that schedules coordinates values.",
+        language: "python",
+        starterCode: "# Define function to jump elevator obstacles\n",
+        expectedOutput: "Hero learned the 'jump()' sequence!",
+        expectedAction: "jump",
+        testCases: [
+          { validateFnStr: "code.includes('def ')", errorMessage: "Please formulate a custom function signature using 'def'." }
+        ],
+        hint: "Write: def jump_obstacle(): and ensure it registers properly."
+      },
+      {
+        id: "w3_l6",
+        worldId: 3,
+        levelNumber: 6,
+        title: "Model Weights Optimization",
         description: "The Boss Robo-Goliath is deflecting physical strikes! Modify model parameters to adjust weights.",
         challengeText: "Create a dictionary or list named 'weights' to evaluate optimized path settings.",
         language: "python",
-        starterCode: "# Adapt model weights to disrupt Goliath reflections\nweights = [5.0, 1.2]\n",
+        starterCode: "# Adapt model weights\nweights = [5.0, 1.2]\n",
         expectedOutput: "Parameters adjusted.",
         expectedAction: "boss_fight",
         testCases: [
@@ -785,17 +929,97 @@ export const WORLDS: World[] = [
         id: "w4_l1",
         worldId: 4,
         levelNumber: 1,
-        title: "Activation Overload",
-        description: "Dodge laser grids by calculating activations parameters.",
-        challengeText: "Implement a condition that filters laser frequency ranges using an 'if' check statement block.",
+        title: "Neural Net Initialization",
+        description: "Verify that the GPU node accelerator triggers.",
+        challengeText: "Write print statement outputting model initialization status text: \"GO\".",
         language: "python",
-        starterCode: "laser_freq = 430\n# Test if laser_freq exceeds 400 to change shields\n",
-        expectedOutput: "Condition check passed.",
+        starterCode: "# Echo GO parameters\n",
+        expectedOutput: "GO",
+        expectedAction: "move",
+        testCases: [
+          { validateFnStr: "code.includes('print(')", errorMessage: "Write standard output print calls." }
+        ],
+        hint: "Write: print('GO')"
+      },
+      {
+        id: "w4_l2",
+        worldId: 4,
+        levelNumber: 2,
+        title: "Setting Batch Size",
+        description: "Allocate memory constraints before feeding batches.",
+        challengeText: "Declare score variable with check score parameter: 'score = 10'.",
+        language: "python",
+        starterCode: "# Set your score parameter here\n",
+        expectedOutput: "Variable 'score' set to 10 successfully.",
+        expectedAction: "collect",
+        testCases: [
+          { validateFnStr: "code.includes('score') && code.includes('10')", errorMessage: "Verify score = 10 syntax matches exactly." }
+        ],
+        hint: "Declare scores like: score = 10"
+      },
+      {
+        id: "w4_l3",
+        worldId: 4,
+        levelNumber: 3,
+        title: "Hidden Layer Propagation",
+        description: "Cycle through multiple dense layer filters to propagate values.",
+        challengeText: "Write an iterator loop using 'for' that repeats 3 times to step over safely.",
+        language: "python",
+        starterCode: "# Implement a pacing loop\n",
+        expectedOutput: "Step 1..",
+        expectedAction: "walk_loop",
+        testCases: [
+          { validateFnStr: "code.includes('for ') || code.includes('while ')", errorMessage: "Please integrate valid 'for' or 'while' looping structures." }
+        ],
+        hint: "Write: for step in range(3): print(step)"
+      },
+      {
+        id: "w4_l4",
+        worldId: 4,
+        levelNumber: 4,
+        title: "Activation Thresholding",
+        description: "Block backprop noise using localized ReLU filter thresholds.",
+        challengeText: "Use an 'if' condition statement block to attack the shadow barrier when damage > 50.",
+        language: "python",
+        starterCode: "damage = 75\n# Check if damage > 50 to attack\n",
+        expectedOutput: "Power-charging slash executed!",
         expectedAction: "attack",
         testCases: [
-          { validateFnStr: "code.includes('if ')", errorMessage: "Check conditions syntaxes inside your script." }
+          { validateFnStr: "code.includes('if ') && code.includes('damage')", errorMessage: "Ensure to implement an 'if' statement on damage metric." }
         ],
-        hint: "An 'if laser_freq > 400:' statement evaluates perfectly."
+        hint: "Write: if damage > 50: print('ATTACK')"
+      },
+      {
+        id: "w4_l5",
+        worldId: 4,
+        levelNumber: 5,
+        title: "Custom Optimizer Function",
+        description: "Write custom optimization equations using def bindings.",
+        challengeText: "Define a custom function using Python's 'def' keyword that schedules coordinates values.",
+        language: "python",
+        starterCode: "# Define function to jump elevator obstacles\n",
+        expectedOutput: "Hero learned the 'jump()' sequence!",
+        expectedAction: "jump",
+        testCases: [
+          { validateFnStr: "code.includes('def ')", errorMessage: "Please formulate a custom function signature using 'def'." }
+        ],
+        hint: "Write: def jump_obstacle(): and ensure it registers properly."
+      },
+      {
+        id: "w4_l6",
+        worldId: 4,
+        levelNumber: 6,
+        title: "Loss Optimization Shield",
+        description: "Defeat Boss Robo-Goliath by tuning model loss convergence parameters.",
+        challengeText: "Create a dictionary or list named 'weights' to evaluate optimized path settings.",
+        language: "python",
+        starterCode: "# Adapt model weights\nweights = [5.0, 1.2]\n",
+        expectedOutput: "Parameters adjusted.",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.includes('weights')", errorMessage: "Verify weights variable contains mathematical properties." }
+        ],
+        hint: "Keep weights variable initialized, and call mock updates or methods to train weights."
       }
     ]
   },
@@ -808,8 +1032,8 @@ export const WORLDS: World[] = [
         id: "w5_l1",
         worldId: 5,
         levelNumber: 1,
-        title: "Model Bootstrapping",
-        description: "Boot model instances using print statements.",
+        title: "Prompt Injection Protection",
+        description: "Initialize the safety filters to start LLM processing.",
         challengeText: "Write print statement outputting model initialization status text: \"GO\".",
         language: "python",
         starterCode: "# Echo GO parameters\n",
@@ -819,6 +1043,86 @@ export const WORLDS: World[] = [
           { validateFnStr: "code.includes('print(')", errorMessage: "Write standard output print calls." }
         ],
         hint: "Write: print('GO')"
+      },
+      {
+        id: "w5_l2",
+        worldId: 5,
+        levelNumber: 2,
+        title: "Temperature Setup",
+        description: "Define the model parameter to govern output diversity.",
+        challengeText: "Declare score variable with check score parameter: 'score = 10'.",
+        language: "python",
+        starterCode: "# Set your score parameter here\n",
+        expectedOutput: "Variable 'score' set to 10 successfully.",
+        expectedAction: "collect",
+        testCases: [
+          { validateFnStr: "code.includes('score') && code.includes('10')", errorMessage: "Verify score = 10 syntax matches exactly." }
+        ],
+        hint: "Declare scores like: score = 10"
+      },
+      {
+        id: "w5_l3",
+        worldId: 5,
+        levelNumber: 3,
+        title: "Token Generation Loop",
+        description: "Iterate over autoregressive context streams to decode tokens.",
+        challengeText: "Write an iterator loop using 'for' that repeats 3 times to step over safely.",
+        language: "python",
+        starterCode: "# Implement a pacing loop\n",
+        expectedOutput: "Step 1..",
+        expectedAction: "walk_loop",
+        testCases: [
+          { validateFnStr: "code.includes('for ') || code.includes('while ')", errorMessage: "Please integrate valid 'for' or 'while' looping structures." }
+        ],
+        hint: "Write: for step in range(3): print(step)"
+      },
+      {
+        id: "w5_l4",
+        worldId: 5,
+        levelNumber: 4,
+        title: "Content Safety Filtering",
+        description: "Analyze toxicity scores to block inappropriate streams.",
+        challengeText: "Use an 'if' condition statement block to attack the shadow barrier when damage > 50.",
+        language: "python",
+        starterCode: "damage = 75\n# Check if damage > 50 to attack\n",
+        expectedOutput: "Power-charging slash executed!",
+        expectedAction: "attack",
+        testCases: [
+          { validateFnStr: "code.includes('if ') && code.includes('damage')", errorMessage: "Ensure to implement an 'if' statement on damage metric." }
+        ],
+        hint: "Write: if damage > 50: print('ATTACK')"
+      },
+      {
+        id: "w5_l5",
+        worldId: 5,
+        levelNumber: 5,
+        title: "LLM Agent Definition",
+        description: "Construct an execution agent structure mapping tool calls.",
+        challengeText: "Define a custom function using Python's 'def' keyword that schedules coordinates values.",
+        language: "python",
+        starterCode: "# Define function to jump elevator obstacles\n",
+        expectedOutput: "Hero learned the 'jump()' sequence!",
+        expectedAction: "jump",
+        testCases: [
+          { validateFnStr: "code.includes('def ')", errorMessage: "Please formulate a custom function signature using 'def'." }
+        ],
+        hint: "Write: def jump_obstacle(): and ensure it registers properly."
+      },
+      {
+        id: "w5_l6",
+        worldId: 5,
+        levelNumber: 6,
+        title: "Attention Weights Alignment",
+        description: "Configure self-attention weights to defeat Robo-Goliath.",
+        challengeText: "Create a dictionary or list named 'weights' to evaluate optimized path settings.",
+        language: "python",
+        starterCode: "# Adapt model weights\nweights = [5.0, 1.2]\n",
+        expectedOutput: "Parameters adjusted.",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.includes('weights')", errorMessage: "Verify weights variable contains mathematical properties." }
+        ],
+        hint: "Keep weights variable initialized, and call mock updates or methods to train weights."
       }
     ]
   },
@@ -831,6 +1135,86 @@ export const WORLDS: World[] = [
         id: "w6_l1",
         worldId: 6,
         levelNumber: 1,
+        title: "Database Health Ping",
+        description: "Confirm database health indices using query tools.",
+        challengeText: "Execute SQL queries selecting all items from a table called 'hero_stats'.",
+        language: "sql",
+        starterCode: "/* Write SQL statement here */\n",
+        expectedOutput: "Executing Query:\nID\tName\tRole",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.toLowerCase().includes('select')", errorMessage: "Ensure your sql query incorporates SELECT keywords." }
+        ],
+        hint: "Write: SELECT * FROM hero_stats;"
+      },
+      {
+        id: "w6_l2",
+        worldId: 6,
+        levelNumber: 2,
+        title: "Transaction Registry",
+        description: "Pull standard system activity logs.",
+        challengeText: "Execute SQL queries selecting all items from a table called 'hero_stats'.",
+        language: "sql",
+        starterCode: "/* Write SQL statement here */\n",
+        expectedOutput: "Executing Query:\nID\tName\tRole",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.toLowerCase().includes('select')", errorMessage: "Ensure your sql query incorporates SELECT keywords." }
+        ],
+        hint: "Write: SELECT * FROM hero_stats;"
+      },
+      {
+        id: "w6_l3",
+        worldId: 6,
+        levelNumber: 3,
+        title: "Index Verification",
+        description: "Query specific row records to test primary keys.",
+        challengeText: "Execute SQL queries selecting all items from a table called 'hero_stats'.",
+        language: "sql",
+        starterCode: "/* Write SQL statement here */\n",
+        expectedOutput: "Executing Query:\nID\tName\tRole",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.toLowerCase().includes('select')", errorMessage: "Ensure your sql query incorporates SELECT keywords." }
+        ],
+        hint: "Write: SELECT * FROM hero_stats;"
+      },
+      {
+        id: "w6_l4",
+        worldId: 6,
+        levelNumber: 4,
+        title: "Relational Mapping",
+        description: "Pull related entities via table selections.",
+        challengeText: "Execute SQL queries selecting all items from a table called 'hero_stats'.",
+        language: "sql",
+        starterCode: "/* Write SQL statement here */\n",
+        expectedOutput: "Executing Query:\nID\tName\tRole",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.toLowerCase().includes('select')", errorMessage: "Ensure your sql query incorporates SELECT keywords." }
+        ],
+        hint: "Write: SELECT * FROM hero_stats;"
+      },
+      {
+        id: "w6_l5",
+        worldId: 6,
+        levelNumber: 5,
+        title: "Procedure Call",
+        description: "Test execution routines on data stores.",
+        challengeText: "Execute SQL queries selecting all items from a table called 'hero_stats'.",
+        language: "sql",
+        starterCode: "/* Write SQL statement here */\n",
+        expectedOutput: "Executing Query:\nID\tName\tRole",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.toLowerCase().includes('select')", errorMessage: "Ensure your sql query incorporates SELECT keywords." }
+        ],
+        hint: "Write: SELECT * FROM hero_stats;"
+      },
+      {
+        id: "w6_l6",
+        worldId: 6,
+        levelNumber: 6,
         title: "Final Boss - Agent Coordination",
         description: "The core master database is offline. Use query codes to extract status scores.",
         challengeText: "Execute SQL queries selecting all items from a table called 'hero_stats'.",

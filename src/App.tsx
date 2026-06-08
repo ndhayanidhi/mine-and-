@@ -366,8 +366,10 @@ export default function App() {
           let nextBadges = [...userStats.badges];
           if (activeLevel.id === 'w1_l6' && !nextBadges.some(b => b.id === 'b1')) {
             nextBadges.push(PRESET_BADGES[0]);
-          } else if (activeLevel.id === 'w2_l2' && !nextBadges.some(b => b.id === 'b2')) {
+          } else if (activeLevel.id === 'w2_l6' && !nextBadges.some(b => b.id === 'b2')) {
             nextBadges.push(PRESET_BADGES[1]);
+          } else if (activeLevel.id === 'w3_l6' && !nextBadges.some(b => b.id === 'b3')) {
+            nextBadges.push(PRESET_BADGES[2]);
           }
 
           setUserStats(prev => ({
