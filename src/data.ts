@@ -663,6 +663,54 @@ export const WORLDS: World[] = [
           { validateFnStr: "code.includes('for ') || code.includes('while ')", errorMessage: "Please integrate valid 'for' or 'while' looping structures." }
         ],
         hint: "Write: for step in range(3): print(step)"
+      },
+      {
+        id: "w1_l4",
+        worldId: 1,
+        levelNumber: 4,
+        title: "Path Decider - Guard Filters",
+        description: "The city guard requires you to isolate healthy records before entering.",
+        challengeText: "Use an 'if' condition statement block to attack the shadow barrier when damage > 50.",
+        language: "python",
+        starterCode: "damage = 75\n# Check if damage > 50 to attack\n",
+        expectedOutput: "Condition check passed.",
+        expectedAction: "attack",
+        testCases: [
+          { validateFnStr: "code.includes('if ') && code.includes('damage')", errorMessage: "Ensure to implement an 'if' statement on damage metric." }
+        ],
+        hint: "Write: if damage > 50: print('ATTACK')"
+      },
+      {
+        id: "w1_l5",
+        worldId: 1,
+        levelNumber: 5,
+        title: "Elevator Shift - Column Selections",
+        description: "Define a secure function that coordinates leaping vectors onto floating city elevators.",
+        challengeText: "Define a custom function using Python's 'def' keyword that schedules coordinates values.",
+        language: "python",
+        starterCode: "# Define function to jump elevator obstacles\n",
+        expectedOutput: "Function registered.",
+        expectedAction: "jump",
+        testCases: [
+          { validateFnStr: "code.includes('def ')", errorMessage: "Please formulate a custom function signature using 'def'." }
+        ],
+        hint: "Write: def jump_obstacle(): and ensure it registers properly."
+      },
+      {
+        id: "w1_l6",
+        worldId: 1,
+        levelNumber: 6,
+        title: "Optimization Shielding - Fitting Waves",
+        description: "The Boss Robo-Goliath is deflecting physical strikes! Modify model parameters to adjust weights.",
+        challengeText: "Create a dictionary or list named 'weights' to evaluate optimized path settings.",
+        language: "python",
+        starterCode: "# Adapt model weights to disrupt Goliath reflections\nweights = [5.0, 1.2]\n",
+        expectedOutput: "Parameters adjusted.",
+        expectedAction: "boss_fight",
+        testCases: [
+          { validateFnStr: "code.includes('weights')", errorMessage: "Verify weights variable contains mathematical properties." }
+        ],
+        hint: "Keep weights variable initialized, and call mock updates or methods to train weights."
       }
     ]
   },

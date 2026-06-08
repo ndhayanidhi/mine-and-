@@ -364,7 +364,7 @@ export default function App() {
 
           // Unlock badges if worlds finished
           let nextBadges = [...userStats.badges];
-          if (activeLevel.id === 'w1_l3' && !nextBadges.some(b => b.id === 'b1')) {
+          if (activeLevel.id === 'w1_l6' && !nextBadges.some(b => b.id === 'b1')) {
             nextBadges.push(PRESET_BADGES[0]);
           } else if (activeLevel.id === 'w2_l2' && !nextBadges.some(b => b.id === 'b2')) {
             nextBadges.push(PRESET_BADGES[1]);
